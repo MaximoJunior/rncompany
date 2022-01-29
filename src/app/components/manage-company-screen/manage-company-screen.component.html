@@ -1,0 +1,20 @@
+<div class="form-header">
+    <h1 class="title text-center">Administrar Empresas</h1>
+    <!-- <div class="input-group-row input-group-row-center">
+      <input type="text" [class.input-required]="!invalidFields.currentRNC" autocomplete="off" placeholder="Digite RNC" [(ngModel)]="currentRNC">
+      <button type="button" (click)="getRNCDetails()">Buscar</button>
+    </div> -->
+</div>
+<app-list-companies
+   (editEvent)="editCompany($event)"
+   [companyToUpdate]="companyUpdated"></app-list-companies>
+
+<div *ngIf="isFormOpen" class="popup-form">
+
+  <app-edit-form 
+        [formGroup]="formCompany"
+        (submitFormEvent)="submitFormCompany($event)"
+        (closeFormEvent)="closeForm($event)"
+    ></app-edit-form>
+
+</div>

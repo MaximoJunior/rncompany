@@ -1,0 +1,14 @@
+
+
+<div class="form-header">
+  <h1 class="title text-center">Crear Empresa</h1>
+  <div class="input-group-row input-group-row-center">
+    <input type="text" [class.input-required]="" autocomplete="off" placeholder="Digite RNC" [(ngModel)]="currentRNC">
+    <!-- !invalidFields.currentRNC -->
+    <button type="button" id="btn-buscar" (click)="getRNCDetails()">Buscar</button>
+  </div>
+</div>
+
+<app-create-form [formGroup]="companyForm" (submitFormEvent)="submitFormCompany($event)"></app-create-form>
+
+

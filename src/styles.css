@@ -1,1 +1,247 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary-color: #2196F3;
+    --dark-primary-color: #005fbe;
+    --acent-color: #03A9F4;
+    --primary-text: #212121;
+    --secondary-text: #757575;
+    --divide-color: #BDBDBD;
+    --text-icon-color: #FFFFFF;
+}
+
+
+*, 
+*::before, 
+*::after {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color:  var(--text-icon-color);
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+.text-center {
+    text-align: center;
+}
+
+.error-color {
+    background-color: rgb(194, 0, 0);
+}
+
+.succes-color {
+    background-color: rgb(40, 173, 96);
+}
+
+.container-form {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 5px 0;
+}
+
+.row.col-2 { 
+    grid-template-columns: repeat(2, 50%);
+}
+
+.row.col-3 { 
+    grid-template-columns: repeat(3, 33.33333%);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 15px;
+}
+
+.input-group-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-group-row-center {
+    justify-content: center;
+}
+
+.input-group label {
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+input {
+    padding: 10px 8px;
+    border: none;
+    border-radius: 4px;
+    transition: outline 100ms ease-in-out;
+    outline: 1px solid rgb(182, 182, 182);
+    display: block;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+input:read-only {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: rgb(230, 230, 230);
+}
+
+ .input-required {
+    outline: 1px solid red !important;
+}
+
+/* .ng-invalid:not(form)  {
+    border-left: 5px solid red;
+  } */
+
+  .ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+
+/*
+.ng-invalid {
+    outline: 1px solid red;
+} */
+
+input:focus {
+    /* border: 2px solid rgb(141, 141, 141); */
+    /* outline: 2px solid rgb(182, 182, 182); */
+    outline-color: blue;
+    box-shadow: 0px 0px 3px blue;
+    /* border-color: blue; */
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 12px 10px;
+    background-color: gray;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 0 5px;
+    box-shadow: 0 0 3px black;
+    transition: opacity 300ms ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:disabled {
+    background-color: rgb(182, 182, 182);
+    cursor: unset;
+}
+
+#btn-buscar {
+    background-color: #157250;
+}
+
+.container-form  {
+    /* position: relative; */
+    padding-bottom: 30px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#btn-close-form {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 3px;
+    box-shadow: none;
+}
+
+#btn-close-form i {
+    font-size: 40px;
+}
+
+.container-form .form-header {
+    padding: 20px 0;
+    position: relative;
+}
+ 
+.form-header .title{
+    padding: 30px 0;
+    letter-spacing: 2px;
+    font-size: 24px;
+    color:rgb(165, 164, 164);
+}
+
+.form-footer {
+    margin-top: 20px;
+}
+
+.form-footer button {
+    width: 400px;
+    padding: 15px 0;
+}
+
+.popup-form {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.582);
+    padding: 15px;
+    padding-top: 100px;
+    overflow: auto;
+
+}
+
+@media screen and (max-width: 550px) {
+    
+    .container-form .row {
+        padding: 0;
+    }
+
+    .row.col-2 { 
+        grid-template-columns: 100%;
+    }
+    
+    .row.col-3 { 
+        grid-template-columns: 100%;
+    }
+
+    .input-group {
+       padding: 10px 15px;
+    }
+
+    .form-header .title { 
+        padding-bottom: 10px;
+    }
+
+    #btn-close-form {
+        top: 10px;
+        right: 6px;
+    }
+
+    .form-footer {
+        padding-bottom: 40px;
+    }
+
+    .form-footer .input-group-row {
+        flex-direction: column-reverse;
+    }
+
+    .form-footer .input-group-row button {
+        margin: 8px 15px;
+    }
+
+    .form-footer button {
+        width: auto;
+    }
+}
+

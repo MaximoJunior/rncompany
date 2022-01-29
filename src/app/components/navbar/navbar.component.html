@@ -1,0 +1,9 @@
+<nav class="nav-bar">
+   <ul class="menu" [class.menu-open]="isOpenMenu">
+       <li><a (click)="closeMenu()" routerLink="/home" routerLinkActive="menu-link-active" class="menu-link">Home</a></li>
+       <li><a (click)="closeMenu()" routerLink="/create-company" routerLinkActive="menu-link-active" class="menu-link">Crear Empresa</a></li>
+       <li><a (click)="closeMenu()" routerLink="/manage-company" routerLinkActive="menu-link-active" class="menu-link">Administrar Empresas</a></li>
+   </ul>
+
+   <button id="btn-toggle" (click)="toggleMenu()"><i class="material-icons">menu</i></button>
+</nav>

@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>RNC</th>
+            <th>Nombre</th>
+            <th class="hide">Nombre Comercial</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let company of listCompanies">
+            <td>{{ company.rnc }}</td>
+            <td>{{ company.name }}</td>
+            <td class="hide">{{ company.commercialName }}</td>
+            <td class="container-btn">
+                <button title="Borrar Empresa" class="error-color" (click)="deleteCompany(company)"><i class="material-icons">delete</i></button>
+                <button title="Editar Empresa" class="succes-color" (click)="editCompany(company)"><i class="material-icons">edit</i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>

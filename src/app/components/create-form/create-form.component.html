@@ -1,0 +1,58 @@
+<div class="container-form">
+
+    <form [formGroup]="formGroup" (submit)="onSubmit()">
+          <div class="row col-3">
+            <div class="col input-group">
+              <label for="inputRNC">RNC:</label>
+              <input type="text" [class.input-required]="!invalidFields.rnc" autocomplete="off" id="inputRNC" formControlName="rnc" readonly>
+            </div>
+
+            <div class="col input-group">
+              <label for="inputName">Nombre:</label>
+              <input type="text" [class.input-required]="!invalidFields.name" autocomplete="off" id="inputName" formControlName="name">
+            </div>
+
+            <div class="col input-group">
+              <label for="inputCommercialName">Nombre Comercial:</label>
+              <input type="text" [class.input-required]="!invalidFields.commercialName" autocomplete="off" id="inputCommercialName" formControlName="commercialName">
+            </div>
+          </div>
+
+          <div class="row col-2">
+            <div class="col input-group">
+              <label for="inputEconomicActivity">Actividad Economica:</label>
+              <input type="text" [class.input-required]="!invalidFields.economicActivity" autocomplete="off" id="inputEconomicActivity" formControlName="economicActivity">
+            </div>
+
+            <div class="col input-group">
+              <label for="inputGovermentBranch">Rama Gubernamental:</label>
+              <input type="text" [class.input-required]="!invalidFields.governmentBranch" autocomplete="off" id="inputGovermentBranch" formControlName="governmentBranch">
+            </div>
+          </div>
+
+          <div class="row col-2">
+            <div class="col input-group">
+              <label for="inputStatus">Estado:</label>
+              <input type="text" [class.input-required]="!invalidFields.status" autocomplete="off" id="inputStatus" formControlName="status">
+            </div>
+
+            <div class="col input-group">
+              <label for="inputCategory">Categoria:</label>
+              <input type="text" autocomplete="off" id="inputCategory" formControlName="category">
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <div class="input-group-row input-group-row-center">
+              <button type="button" class="error-color" (click)="resetFormFields()">CANCELAR</button>
+              <button type="submit" class="succes-color">GUARDAR</button>
+              <!-- [disabled]="!companyForm.valid" -->
+            </div>
+          </div>
+
+          <!-- <div>
+              valido{{ companyForm.valid | json }}
+          </div> -->
+
+    </form>
+</div>
