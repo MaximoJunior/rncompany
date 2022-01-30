@@ -23,7 +23,6 @@ export class CompanyService {
   }
 
   saveCompany(data:any): Observable<any> {
-   
     return this.http.post( this.url, data, { headers: this.config } ).pipe( retry(2) )
   }
 
