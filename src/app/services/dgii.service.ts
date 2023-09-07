@@ -2,13 +2,14 @@ import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DgiiService {
 
-  url:string = 'https://rncompan.herokuapp.com/api/dgii/';
+  url:string = environment.API + '/dgii/';
 
   constructor( private http:HttpClient) {
 

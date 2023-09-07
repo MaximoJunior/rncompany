@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { Company } from '../interfaces/company';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Company } from '../interfaces/company';
 })
 export class CompanyService {
 
-  url:string = 'https://rncompan.herokuapp.com/api/company/';
+  url:string = environment.API + '/company/';
   config:HttpHeaders;
   
 
